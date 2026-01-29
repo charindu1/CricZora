@@ -1,0 +1,263 @@
+.result {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} 
+
+.result-box {
+  margin-top: 5em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5em;
+  border-radius: 1em;
+  max-width: 35em;
+  width: 100%;
+}
+
+.value-box {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1em;
+  text-align: left;
+}
+
+.value-box p {
+  margin: 0.6em 0;
+  font-size: 0.9rem;
+}
+
+.result-card {
+  background: rgba(255, 200, 172, 0.1);
+  padding: 1.5em;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card h2 {
+  margin-bottom: 0.5em;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 16em; 
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.watermark p {
+  font-size: 0.8rem;
+  color: #ffebb9;
+}
+
+.watermark-logo {
+    width: 7em;
+}
+
+.back-btn {
+  background-color: #ff3d00;
+  font-size: 1rem;
+}
+
+.share-btn {
+  background-color: #ff8a00;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background-color: #a22600;
+}
+
+.share-btn:hover {
+  background-color: #a95a00;
+}
+
+
+/* Share popup css */
+.share-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.share-overlay.open {
+  animation: overlayFadeIn 0.25s ease-out forwards;
+}
+
+.share-overlay.closing {
+  animation: overlayFadeOut 0.25s ease-in forwards;
+}
+
+.share-modal {
+  position: relative; /* for close button positioning */
+  background: rgb(40, 40, 40);
+  padding: 1.5em;
+  border-radius: 1em;
+  width: 30em;
+  text-align: center;
+}
+
+/* animation when modal opens */
+.share-overlay.open .share-modal {
+  animation: modalScaleIn 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.share-overlay.closing .share-modal {
+  animation: modalScaleOut 0.25s ease-in forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5em;
+  right: 0.7em;
+  width: 1.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.share-preview {
+  width: 100%;
+  border-radius: 0.55em;
+  margin: 0.75em 0;
+  border: 1px solid #ffb703;
+}
+
+.share-actions {
+  display: flex;
+  gap: 0.9em;
+  justify-content: center;
+}
+
+.popup-share-btn, .popup-download-btn {
+  background-color: #ff8a00;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-share-btn:hover, .popup-download-btn:hover {
+  background-color: #a95a00;
+}
+
+.btn-icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+@media (max-width: 650px) {
+  .result-box {
+    padding: 1em;
+    max-width: 90vw;
+  }
+  .result-card {
+    padding: 0 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    border-radius: 0.5em;
+  }
+  .chart-wrapper {
+    height: 10em; 
+  }
+  .value-box {
+    grid-template-columns: 1fr;
+    gap: 0.7em;
+    text-align: center;
+  }
+  .value-box .left,
+  .value-box .right {
+    display: contents; /* unwrap the left/right wrapper */
+  }
+  .result-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3em;
+  }
+  .value-box p {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .watermark {
+    gap: 0.2em;
+    right: 0.5em;
+    bottom: 0.2em;
+  }
+
+  .watermark p {
+    font-size: 0.55rem;
+  }
+
+  .watermark-logo {
+      width: 5em;
+    
+  }
+  .result-buttons {
+    flex-direction: column-reverse;
+    gap: 0.7em;
+    margin-top: 0.7em;
+  }
+  .back-btn, .share-btn {
+    margin-top: 0;
+    font-size: 0.9rem;
+    padding: 0.7em;
+  }
+
+  .share-modal {
+    width: calc(90vw - 2em);
+    padding: 1em;
+  }
+  .share-modal h3 {
+    margin-top: 0;
+  }
+  .share-preview {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .btn-icon {
+    width: 1em;
+    height: 1em;
+  }
+  .close-btn {
+    top: 1em;
+    right: 0.6em;
+    width: 1.2em;
+  }
+  .share-actions {
+    gap: 0.5em;
+  }
+
+  .popup-share-btn, .popup-download-btn {
+    font-size: 0.85rem;
+    margin-top: 0.5em;
+  }
+}

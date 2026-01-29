@@ -1,0 +1,155 @@
+.navbar {
+    position: fixed;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 4000;
+    transition: background-color 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.65), transparent);
+    padding: 1.5em 7%;
+    top: 0;
+}
+
+.navbar-logo img{
+    width: 12em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.navbar li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 0.9em;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3 ease;
+    cursor: pointer;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-panel {
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-menu span.active {
+  color: #ffb703;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffb703;
+    border-radius: 6em;
+    padding: 1em 1.1em;
+}
+
+.navbar-action li {
+    margin: 0;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+
+
+/* responsiveness */
+@media (max-width: 1100px) {
+    .navbar-logo img{
+        width: 10em;
+    } 
+    .navbar li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 950px) {
+  .navbar {
+    position: fixed;
+  }
+  .hamburger-icon {
+    display: block;
+    width: 2em;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .navbar-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background-color: #240e00;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 8em;
+    gap: 1.5em;
+    transition: right 0.4s ease-in-out;
+    z-index: 1050;
+  }
+
+  .navbar-panel.mobile-active {
+    right: 0;
+  }
+
+  .navbar-panel ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .navbar-menu,
+  .navbar-action {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9;
+    pointer-events: all;
+    animation: overlayFadeIn 0.25s ease-out forwards;
+  }
+  .overlay.closing {
+    animation: overlayFadeOut 0.25s ease-in forwards;
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .navbar-logo img {
+    width: 9em;
+  }
+  .hamburger-icon {
+    width: 1.5em;
+  }
+}

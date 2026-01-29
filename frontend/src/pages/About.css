@@ -1,0 +1,126 @@
+.about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 7em;
+    margin-bottom: 2em;
+}
+
+.about-contents {
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    padding: 2.5em 4em;
+    background: rgba(255, 255, 255, 0.085);
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1em;
+    margin: 1em 0;
+    animation: translateIn 3s ease;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.about-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-content img {
+    width: 20em;
+    border-radius: 1em;
+    transition: transform 0.4s ease;
+    animation: scaleIn 3s ease;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.about-content img:hover {
+    transform: scale(1.02);
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 35em;
+    animation: scaleIn 3s ease;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%; 
+}
+
+.text-content h2 {
+    text-align: left;
+    font-size: 2rem;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+}
+
+.text-content span {
+    color: #ffd875;
+}
+
+
+
+/* responsiveness */
+
+@media (max-width: 1100px) {
+    .about-content {
+        gap: 2em;
+        flex-wrap: wrap;
+        padding: 2.5em 2em;
+        margin: 1em 0;
+    }
+    .about-content img {
+        width: 17em;
+    }
+    .text-content {
+        gap: 1em;
+        max-width: 40em;    
+    }
+    .text-content h2 {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.4em;
+    }
+}
+
+@media (max-width: 650px) {
+    .about {
+        padding-top: 6.5em;
+    }
+    .about-content {
+        gap: 1.2em;
+        padding: 1.5em 1.5em;
+        margin-bottom: 1.2em;
+        margin-top: 0;
+    }
+    .about-content img {
+        width: 15em;
+    }
+    .text-content {
+        gap: 1em;
+    }
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+    .text-content p {
+        font-size: 0.9rem;
+        line-height: 1.3em;
+    }
+}

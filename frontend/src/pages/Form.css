@@ -1,0 +1,130 @@
+/* --------- Form Container --------- */
+.form {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    margin-top: 5em;
+    max-width: 31em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+} 
+
+.form-wrapper > a {
+    align-items: flex-start;
+    width: fit-content;
+}
+
+/* --------- Back Link --------- */
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-bottom: 0.5em;
+}
+
+.nav-back img {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+/* --------- Form Card --------- */
+.form-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.085);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2em 2.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.highlight {
+    color: #ff8a00;
+}
+
+.loading-text {
+    text-align: center;
+    color: #ffffff;
+    font-style: italic;
+}
+
+
+/* --------- Submit Button with Loader --------- */
+/* Container to disable pointer events if needed via class */
+.btn-predict {
+    margin-top: 1em;
+    padding: 0.8em;
+}
+
+.btn-disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* The spinning loader */
+.btn-loader {
+  width: 1.25em;
+  height: 1.25em;
+  border: 3px solid rgba(255, 255, 255, 0.3); 
+  border-top: 3px solid #ffffff; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto; 
+  display: block;
+}
+
+/* Keyframes for rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* responsiveness */
+
+@media (max-width: 1100px) {
+    .form-wrapper {
+        margin-top: 3em;
+    }
+    .nav-back {
+        font-size: 0.9rem;
+    }
+    .nav-back img {
+        width: 1em;
+        height: 1em;
+    }
+    .btn-predict {
+        margin-top: 1em;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 650px) {
+    .form-title {
+        font-size: 1.2rem;
+    }
+    .form-card {
+        padding: 2em 1em;
+    }   
+}

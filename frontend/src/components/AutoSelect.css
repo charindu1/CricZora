@@ -1,0 +1,81 @@
+.auto-select {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.auto-select input {
+    width: 100%;
+    padding: 0.75em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10em;
+    font-size: 0.9rem;
+    transition: border 0.2s;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.auto-select input:focus {
+    outline: none;
+    border-color: #ff8a00;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-size: 0.9rem;
+}
+
+/* Dropdown */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #000000;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.05);; 
+    border-radius: 1em;
+    max-height: 9em;
+    overflow: auto;
+    margin-top: 0.25em;
+    scrollbar-color: #222 rgb(80, 80, 80); /* thumb track */
+}
+
+
+.option {
+    padding: 0.75em 1em;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(40, 40, 40); 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.option:hover {
+    background-color: #ff8a00;
+    color: #fff;
+}
+
+.option.active {
+    background-color: #ff8a00;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* responsivness */
+
+@media (max-width: 650px) {
+    .auto-select input {
+        padding: 0.5em 1em;
+    }
+    .option {
+        padding: 0.6em 1em;
+    }
+    .option.active {
+        background-color: #ff8a00;
+        color: #fff;
+        font-weight: bold;
+    }
+}

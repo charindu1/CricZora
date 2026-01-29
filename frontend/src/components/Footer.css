@@ -1,0 +1,166 @@
+.footer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 2em;
+    background: rgba(15, 15, 15, 0.338);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(100px);
+    border-radius: 1em;
+}
+
+.footer-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 1em;
+    padding: 3em 7%;
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    animation: translateIn 5s ease;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.footer h2 {
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.footer p {
+    line-height: 1.5em;
+}
+
+.footer-left {
+    gap: 1em;
+}
+
+.footer-left img {
+    width: 11em;
+}
+
+.footer-center ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    text-align: center;
+    list-style: none;
+}
+
+.footer-center ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-right ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.3em;
+    align-items: flex-start;
+}
+
+.footer-right ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    list-style: none;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;     
+  gap: 12px;               
+}
+
+.whatsapp, .gmail, .phone {
+    width: 1.5em;
+}
+
+.footer-right .social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style: none;
+}
+
+.social-links img {
+    width: 1.5em;
+}
+
+.contact-bg {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin .contact-bg {
+  background: #0077B5;
+}
+
+.facebook .contact-bg {
+  background: #4267B2;
+}   
+
+.instagram .contact-bg {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%);
+}
+
+.contact-bg:hover {
+    background: #ff0000;
+    transform: scale(1.1);
+}
+
+.copyright-text {
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+@media (max-width: 770px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        padding: 2em 7%;
+        gap: 4em;
+    }
+    .footer h2 {
+        font-size: 1.3rem;
+        padding-bottom: 0.5em;
+    }
+    .footer p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .footer-left, .footer-center, .footer-right {
+        gap: 1em;
+    }
+    .footer ul {
+        gap: 1em;
+    }
+    .footer ul li {
+        font-size: 0.9rem;
+    }
+    .whatsapp, .gmail, .phone {
+        width: 1.2em;
+    }
+    .contact-bg {
+        width: 2em;
+        height: 2em;
+    }
+    .copyright-text {
+        padding: 1em 0;
+    }
+}
