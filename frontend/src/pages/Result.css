@@ -118,6 +118,7 @@
   border-radius: 1em;
   width: 30em;
   text-align: center;
+  z-index: 10000;
 }
 
 /* animation when modal opens */
