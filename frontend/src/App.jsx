@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <AppLayout>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode='sync'>
           {loading && (
               <Preloader key="preloader" onComplete={handlePreloaderComplete} />
           )}
