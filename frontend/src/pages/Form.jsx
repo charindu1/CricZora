@@ -162,12 +162,12 @@ export default function Form() {
                             <span className="alert-text"> {alert.message} </span>
 
                             {/* close button */}
-                            <button 
+                            <span 
                                 className="alert-close-btn"
                                 onClick={() => setAlert(null)}
                             >
-                                <span>✖</span>
-                            </button>
+                                ✖
+                            </span>
                         </div>
                     </div>
                 )}

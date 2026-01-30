@@ -159,7 +159,7 @@ body {
 
 .alert-icon {
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.386) !important;
+  background: rgba(255, 255, 255, 0.386);
   width: 1.5em;
   height: 1.5em;
   display: flex;
