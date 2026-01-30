@@ -15,3 +15,23 @@ CricZora is a full-stack web application that uses Machine Learning to predict t
 - **Backend:** FastAPI (Python)
 - **Machine Learning:** Scikit-learn, Pandas, Numpy, Jupyter Lite
 - **Deployment:** Vercel (Frontend), Backend (Hugging Face)
+
+## Installation & Setup
+**1. Clone the repo:**
+   ```bash
+   git clone [https://github.com/charindu1/CricZora.git](https://github.com/charindu1/CricZora.git)
+```
+
+**2. Frontend Setup:**
+```bash
+  cd frontend
+  npm install
+  npm run dev
+```
+
+**3. Backend Setup:**
+```bash
+  cd backend
+  pip install -r requirements.txt
+  uvicorn main:app --reload
+```
