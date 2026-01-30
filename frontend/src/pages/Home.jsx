@@ -7,9 +7,12 @@ import result from '../assets/result.svg';
 import bar_graph from '../assets/bar_graph.svg';
 import home_ground from '../assets/home_ground.svg';
 import { motion } from "framer-motion";
+import usePageTitle from "../Hook/usePageTitle";
 
 export default function Home({ enableDelay }) {
     const navigate = useNavigate();
+
+    usePageTitle("CricZora - Home");
 
     return (
         <motion.div
