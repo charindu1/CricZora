@@ -166,7 +166,7 @@ export default function Form() {
                                 className="alert-close-btn"
                                 onClick={() => setAlert(null)}
                             >
-                                ✖
+                                <span style={{ color: '#ffffff' }}>✖</span>
                             </button>
                         </div>
                     </div>
