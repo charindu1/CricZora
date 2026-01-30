@@ -2,7 +2,7 @@
 .form {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +105,7 @@
 
 @media (max-width: 1100px) {
     .form-wrapper {
-        margin-top: 3em;
+        margin-top: 0;
     }
     .nav-back {
         font-size: 0.9rem;

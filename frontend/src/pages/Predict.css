@@ -116,7 +116,7 @@
 @media (max-width: 650px) {
     .predict {
         height: auto;
-        padding-top: 6em;
+        padding-top: 6.5em;
     }
     .cards-container {
         gap: 1.5em;
