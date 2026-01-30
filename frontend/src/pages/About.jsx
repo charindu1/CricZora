@@ -5,6 +5,7 @@ import project_implementation from '../assets/project_implementation.png'
 import motivation from '../assets/motivation.png'
 import contact_us from '../assets/contact_us.png'
 import { useEffect } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function About({ enableDelay }) {
 

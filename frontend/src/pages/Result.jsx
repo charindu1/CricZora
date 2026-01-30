@@ -10,6 +10,7 @@ import light_download from '../assets/light-download.svg'
 import light_cross from '../assets/light-cross.svg'
 import { motion } from "framer-motion";
 import logo from '../assets/logo.png'
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function Result() {
     // allows to grab the state, it means "navigate("/result", { state: { data } })" here

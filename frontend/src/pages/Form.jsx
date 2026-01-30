@@ -7,6 +7,7 @@ import './Form.css'
 import light_forward_arrow from '../assets/light-forward-arrow.svg';
 import light_backward_arrow from '../assets/light-backward-arrow.svg'
 import { motion } from "framer-motion";
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function Form() {
     // grb the formatId from the URL
