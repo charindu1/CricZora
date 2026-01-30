@@ -1,0 +1,44 @@
+# Environments
+venv/
+ENV/
+.env
+
+# Python internals
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nosetests
+.pytest_cache/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Database & Logs
+*.log
+*.sqlite3
+*.db
+
+# Editor/OS specific
+.vscode/
+.idea/
+.DS_Store

@@ -39,8 +39,7 @@ export default function App() {
           )}
       </AnimatePresence>
   
-      {!loading && (
-        <>
+        <div style={{ visibility: loading ? "hidden" : "visible", height: loading ? 0 : "auto" }}>
           <Navbar />
           <Routes>
               {/* Landing page */}
@@ -62,8 +61,7 @@ export default function App() {
               <Route path="/model" element={<Model enableDelay={isFirstMount} />} />
           </Routes>
           <Footer />
-        </>
-      )}
+        </div>
     </AppLayout>
   )
 }
