@@ -100,7 +100,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 8em;
-    gap: 1.5em;
+    gap: 2em;
     transition: right 0.4s ease-in-out;
     z-index: 1050;
   }
@@ -112,7 +112,7 @@
   .navbar-panel ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 2em;
   }
 
   .navbar-menu,

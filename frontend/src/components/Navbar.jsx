@@ -117,7 +117,7 @@ export default function Navbar() {
           </div>
           <div className="navbar-action">
               <ul>
-                <li><button className='btn-zora'>View on GitHub</button></li>
+                <li><button className='btn-zora' onClick={()=>window.open("https://github.com/charindu1/CricZora", "_blank")}>View on GitHub</button></li>
               </ul>
           </div>
         </div>

@@ -142,8 +142,6 @@ export default function Result() {
                 console.log("Share cancelled");
             }
         }
-        // fallback if sharing not supported
-        handleDownload();
     }
 
     // function for download button
