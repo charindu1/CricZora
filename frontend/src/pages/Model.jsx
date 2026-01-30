@@ -8,13 +8,7 @@ import { useEffect, useState } from 'react';
 export default function Model({ enableDelay }) {
 
   // show in browser tab which page is this
-  useEffect(() => {
-      document.title = "CricZora - Model";
-
-      return () => {
-      document.title = "CricZora - Home"; // optional reset when leaving page
-      };
-  }, []);
+  usePageTitle("CricZora - Model");
 
   // Responsive chart font size handling
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);

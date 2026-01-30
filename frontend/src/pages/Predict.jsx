@@ -3,18 +3,13 @@ import './Predict.css'
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import light_forward_arrow from '../assets/light-forward-arrow.svg';
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function Predict({ enableDelay }) {
     const navigate = useNavigate();
 
     // show in browser tab which page is this
-    useEffect(() => {
-        document.title = "CricZora - Predict";
-
-        return () => {
-        document.title = "CricZora - Home"; // optional reset when leaving page
-        };
-    }, []);
+    usePageTitle("CricZora - Predict");
 
     const formats = [
         {id: "t20", label: "T20", description: "Twenty20 International", color: "#ffb703"},

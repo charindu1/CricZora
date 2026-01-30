@@ -37,9 +37,7 @@ export default function Form() {
     const [alert, setAlert] = useState(null);
 
     // show in browser tab which page is this
-    useEffect(() => {
-        document.title = `CricZora - ${formatId.toUpperCase()} winning Predictor`;
-    }, []);
+    usePageTitle(`CricZora - ${formatId.toUpperCase()} Predict`);
 
     // fetches the valid teams/venues for the specific match format
     useEffect(() => {

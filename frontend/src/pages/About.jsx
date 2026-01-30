@@ -9,13 +9,7 @@ import { useEffect } from 'react';
 export default function About({ enableDelay }) {
 
     // show in browser tab which page is this
-    useEffect(() => {
-        document.title = "CricZora - About";
-
-        return () => {
-        document.title = "CricZora - Home"; // optional reset when leaving page
-        };
-    }, []);
+    usePageTitle("CricZora - About");
 
     return (
         <motion.div

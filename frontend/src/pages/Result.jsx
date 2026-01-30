@@ -50,13 +50,7 @@ export default function Result() {
     if (!data) return null; 
 
     // show in browser tab which page is this
-    useEffect(() => {
-        document.title = `CricZora - ${formatId.toUpperCase()} Match Predicted Result`;
-
-        return () => {
-        document.title = "CricZora - Home"; // optional reset when leaving page
-        };
-    }, []);
+    usePageTitle(`CricZora - ${formatId.toUpperCase()} Match Predicted Result`);
 
     // extract and formatting data
     // "??" --> ensure undefined values default to 0
