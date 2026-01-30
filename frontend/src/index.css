@@ -169,9 +169,9 @@ body {
 }
 
 .alert-close-btn span{
-  background: none;
-  border: none;
-  color: white !important;
+  background: transparent;
+  border: transparent;
+  color: white;
   font-size: 0.8rem;
   cursor: pointer;
   opacity: 0.7;
@@ -372,8 +372,6 @@ body {
     background: rgba(255, 255, 255, 0.386) !important;
   }
   .alert-close-btn {
-    font-size: 0.7rem !important;
-    color: white !important;
-    filter: none !important; 
+    font-size: 0.7rem;
   }
 }
