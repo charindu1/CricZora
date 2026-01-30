@@ -10,6 +10,10 @@ export default function Predict({ enableDelay }) {
     // show in browser tab which page is this
     useEffect(() => {
         document.title = "CricZora - Predict";
+
+        return () => {
+        document.title = "CricZora - Home"; // optional reset when leaving page
+        };
     }, []);
 
     const formats = [
