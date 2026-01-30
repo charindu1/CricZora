@@ -156,10 +156,10 @@
 @media (max-width: 650px) {
     .hero-section {
         flex-wrap: wrap;
-        margin-top: 3em;
-        margin-bottom: 2.5em;
+        padding: 3em;
+        padding-bottom: 2.5em;
         gap: 0;
-        height: 85vh;
+        height: 90vh;
     }
     .hero-left {
         align-items: center;
