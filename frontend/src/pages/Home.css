@@ -156,7 +156,7 @@
 @media (max-width: 650px) {
     .hero-section {
         flex-wrap: wrap;
-        padding: 3em;
+        padding-top: 3em;
         padding-bottom: 2.5em;
         gap: 0;
         height: 90vh;
