@@ -168,13 +168,13 @@ body {
   border-radius: 50%;
 }
 
-.alert-close-btn span{
+.alert-close-btn {
   background: transparent;
   border: transparent;
   color: white;
   font-size: 0.8rem;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
   padding: 0 0.25em;
   transition: opacity 0.2s, transform 0.2s;
 }
