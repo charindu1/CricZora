@@ -8,9 +8,9 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/", "dest": "/home.jsx" },
+    { "src": "/about", "dest": "/about.jsx" },
+    { "src": "/predict", "dest": "/predict.jsx" },
+    { "src": "/model", "dest": "/model.jsx" }
   ]
 }
