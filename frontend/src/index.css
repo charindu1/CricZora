@@ -369,9 +369,11 @@ body {
     font-size: 0.75rem;
     width: 1.5em;
     height: 1.5em;
+    background: rgba(255, 255, 255, 0.386) !important;
   }
   .alert-close-btn {
-    font-size: 0.7rem;
-    line-height: 0;
+    font-size: 0.7rem !important;
+    color: white !important;
+    filter: none !important; 
   }
 }
