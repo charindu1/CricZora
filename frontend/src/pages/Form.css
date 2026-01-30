@@ -122,7 +122,7 @@
 
 @media (max-width: 650px) {
     .form {
-        height: 100vh;
+        height: 95vh;
     }
     .form-title {
         font-size: 1.2rem;

@@ -169,7 +169,8 @@ body {
 }
 
 .alert-close-btn {
-  border: none;
+  background: transparent;
+  border: transparent;
   color: white;
   font-size: 0.8rem;
   cursor: pointer;
