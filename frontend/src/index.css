@@ -176,13 +176,8 @@ body {
   cursor: pointer;
   opacity: 1;
   padding: 0 0.25em;
-  transition: opacity 0.2s, transform 0.2s;
 }
 
-.alert-close-btn:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
 
 
 /* --- Toast-in-out animation --- */
@@ -369,7 +364,7 @@ body {
     font-size: 0.75rem;
     width: 1.5em;
     height: 1.5em;
-    background: rgba(255, 255, 255, 0.386) !important;
+    background: rgba(255, 255, 255, 0.386);
   }
   .alert-close-btn {
     font-size: 0.7rem;
