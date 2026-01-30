@@ -168,9 +168,9 @@ body {
   border-radius: 50%;
 }
 
-.alert-close-btn {
-  background: transparent;
-  border: transparent;
+.alert-close-btn span{
+  background: none;
+  border: none;
   color: white !important;
   font-size: 0.8rem;
   cursor: pointer;
