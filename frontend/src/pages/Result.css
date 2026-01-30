@@ -178,6 +178,9 @@
 
 
 @media (max-width: 650px) {
+  .result {
+    height: 95vh;
+  }
   .result-box {
     margin-top: 0;
     padding: 1em;

@@ -169,7 +169,7 @@ body {
 }
 
 .alert-close-btn {
-  background: white;
+  background: none;
   border: none;
   color: white;
   font-size: 0.8rem;
