@@ -158,7 +158,6 @@ body {
 }
 
 .alert-icon {
-  font-size: 1rem;
   background: rgba(255, 255, 255, 0.386);
   width: 1.5em;
   height: 1.5em;
@@ -168,15 +167,20 @@ body {
   border-radius: 50%;
 }
 
+.alert-icon img {
+  width: 1em;
+}
+
 .alert-close-btn {
-  background: transparent;
-  border: transparent;
   color: white;
-  font-size: 0.8rem;
+  background: none;
+  border: none;
+  width: 1.6em;
   cursor: pointer;
   opacity: 1;
   padding: 0 0.25em;
   transition: opacity 0.2s, transform 0.2s;
+  line-height: 0;
 }
 
 .alert-close-btn:hover {
@@ -372,6 +376,9 @@ body {
     background: rgba(255, 255, 255, 0.386);
   }
   .alert-close-btn {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
+  .alert-icon img {
+    width: 1em;
+}
 }

@@ -6,6 +6,9 @@ import AutoSelect from "../components/AutoSelect";
 import './Form.css'
 import light_forward_arrow from '../assets/light-forward-arrow.svg';
 import light_backward_arrow from '../assets/light-backward-arrow.svg'
+import light_cross from '../assets/light-cross.svg'
+import light_success_icon from '../assets/light-success-icon.svg'
+import light_error_icon from '../assets/light-error-icon.svg'
 import { motion } from "framer-motion";
 import usePageTitle from "../hooks/usePageTitle";
 
@@ -156,7 +159,7 @@ export default function Form() {
                     <div className="toast-container" key={alert.id}>
                         <div className={`alert-box ${alert.type}`}>
                             <span className="alert-icon">
-                                {alert.type === "success" ? "✔" : "!"}
+                                {alert.type === "success" ? <img src={light_success_icon} alt="Success" /> : <img src={light_error_icon} alt="Error" />}
                             </span>
 
                             <span className="alert-text"> {alert.message} </span>
@@ -166,7 +169,7 @@ export default function Form() {
                                 className="alert-close-btn"
                                 onClick={() => setAlert(null)}
                             >
-                                <span style={{ color: '#ffffff' }}>✖</span>
+                                <img src={light_cross} alt="Close" />
                             </button>
                         </div>
                     </div>
