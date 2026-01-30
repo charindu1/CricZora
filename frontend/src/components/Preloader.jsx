@@ -30,8 +30,8 @@ export default function Preloader({ onComplete }) {
                 src={logo} 
                 alt="Loading..."
                 layoutId="site-logo" // SAME ID as Navbar
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }} // Pulse or start big
+                initial={{ x: -100, y: 0, opacity: 0 }}
+                animate={{ x: 0, y: 0, opacity: 1 }} // Pulse or start big
                 transition={{ duration: 0.8, ease: "circOut" }}
                 className="preloader-logo"
             />

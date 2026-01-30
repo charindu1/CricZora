@@ -158,7 +158,7 @@ body {
 }
 
 .alert-icon {
-  background: rgba(255, 255, 255, 0.386);
+  background: rgba(255, 255, 255, 0.349);
   width: 1.5em;
   height: 1.5em;
   display: flex;
@@ -375,10 +375,4 @@ body {
     height: 1.5em;
     background: rgba(255, 255, 255, 0.386);
   }
-  .alert-close-btn {
-    font-size: 0.6rem;
-  }
-  .alert-icon img {
-    width: 1em;
-}
 }

@@ -161,6 +161,7 @@
         height: 2em;
     }
     .copyright-text {
-        padding: 1em 0;
+        padding-top: 1em;
+        padding-bottom: 2em;
     }
 }
