@@ -1,4 +1,4 @@
-# CricZora - International Cricket Match Predictor
+## CricZora - International Cricket Match Predictor
 
 CricZora is a full-stack web application that uses Machine Learning to predict the winning probability of international cricket matches across T20, ODI, and Test formats.
 
