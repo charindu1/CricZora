@@ -113,7 +113,9 @@
 
 .share-modal {
   position: relative; /* for close button positioning */
-  background: rgb(40, 40, 40);
+  background: rgba(42, 42, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(100px);
   padding: 1.5em;
   border-radius: 1em;
   width: 30em;
