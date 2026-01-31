@@ -18,9 +18,11 @@
 }
 
 .navbar-logo img{
+  display: block;
     width: 12em;
     margin: 0;
     cursor: pointer;
+    line-height: 0;
 }
 
 .navbar li {
@@ -147,7 +149,7 @@
 
 @media (max-width: 400px) {
   .navbar-logo img {
-    width: 9em;
+    width: 8em;
   }
   .hamburger-icon {
     width: 1.5em;
