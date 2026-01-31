@@ -5,19 +5,19 @@ CricZora is a full-stack web application that uses Machine Learning to predict t
 * Live Demo : https://criczora.vercel.app
 
 ## Features
-* **Format Specific Predictions:** Tailored ML models for T20, ODI, and Test matches.
-* **Smart UI:** Interactive form with Auto-completion for teams and venues.
-* **Real-time Results:** Instant winning probability calculations.
-* **Responsive Design:** Fully optimized for both Mobile and Desktop users.
+* Implemented ML models for T20, ODI, and Test matches.
+* Interactive form with Auto-completion for teams and venues.
+* Instant winning probability calculations.
+* Fully optimized for both Mobile and Desktop users (Responsiveness).
 
 ## Tech Stack
-- **Frontend:** React.js, Framer Motion (Animations), CSS3
-- **Backend:** FastAPI (Python)
-- **Machine Learning:** Scikit-learn, Pandas, Numpy, Jupyter Lite
+- **Frontend:** React.js, Framer Motion (for animations), CSS3
+- **Backend:** FastAPI in Python
+- **Machine Learning:** Scikit-learn, Pandas, Numpy, and using Jupyter Lite
 - **Deployment:** Vercel (Frontend), Backend (Hugging Face)
 
 ## Installation & Setup
-**1. Clone the repo:**
+**1. Clone the rerepository:**
    ```bash
    git clone [https://github.com/charindu1/CricZora.git](https://github.com/charindu1/CricZora.git)
 ```
