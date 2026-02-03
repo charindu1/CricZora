@@ -29,7 +29,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className="footer-right">
-                    <h2>Follow Us</h2>
+                    <h2>Follow Me</h2>
                     <ul className="contact-info">
                         <li><img src={light_phone} alt="" className='phone'/>+94 71 553 1465</li>
                         <li><img src={light_gmail} alt="" className='gmail'/>charinduruhansa2003@gmail.com</li>
