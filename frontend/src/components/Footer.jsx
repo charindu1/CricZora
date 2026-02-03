@@ -6,6 +6,7 @@ import light_whatsapp from '../assets/light-whatsapp.svg'
 import light_facebook from '../assets/light-facebook.svg'
 import light_linkedin from '../assets/light-linkedin.svg'
 import light_instagram from '../assets/light-instagram.svg'
+import light_github from '../assets/light-github.svg'
 import './Footer.css'
 
 
@@ -48,6 +49,11 @@ export default function Footer() {
                         <li className='instagram' onClick={() => window.open('https://www.instagram.com/charindu_munasinghe?igsh=cm51dWdmMmFub3Vt')}>
                             <div className="contact-bg">
                                 <img src={light_instagram} alt="" />
+                            </div>
+                        </li>
+                        <li className="github" onClick={() => window.open('https://github.com/charindu1')}>
+                            <div className="contact-bg">
+                                <img src={light_github} alt="" />
                             </div>
                         </li>
                     </div>
