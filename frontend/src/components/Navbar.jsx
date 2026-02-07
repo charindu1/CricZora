@@ -121,7 +121,9 @@ export default function Navbar() {
               </ul>
           </div>
         </div>
-        <img src={light_hamburger} className='hamburger-icon' alt="menu" onClick={toggleMenu}/>
+        <div className="hamburger">
+          <img src={light_hamburger} className='hamburger-icon' alt="menu" onClick={toggleMenu}/>
+        </div>
       </div>
     </>
   )

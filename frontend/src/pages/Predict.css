@@ -35,7 +35,8 @@
     backdrop-filter: blur(100px);
 }
 
-.format-card:hover {
+.format-card:hover,
+.format-card:active {
     transform: translateY(-5px);
 }
 
@@ -50,7 +51,8 @@
     z-index: 0;
 }
 
-.format-card:hover::before {
+.format-card:hover::before,
+.format-card:active::before {
     transform: scaleY(1);
 }
 

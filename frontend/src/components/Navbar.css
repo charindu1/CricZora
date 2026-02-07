@@ -84,16 +84,24 @@
   .navbar {
     position: fixed;
   }
+  
+  .hamburger {
+    cursor: pointer;
+    z-index: 1100;
+    padding: 0.5em;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
   .hamburger-icon {
     display: block;
     width: 2em;
-    cursor: pointer;
     z-index: 1100;
-    transition: transform 0.1s ease;
   }
 
-  .hamburger-icon:active {
-      transform: scale(0.8);
+  .hamburger:active {
+    transform: scale(0.8);
+    background: rgba(255, 255, 255, 0.25);
   }
 
   .navbar-panel {
