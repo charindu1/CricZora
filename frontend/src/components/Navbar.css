@@ -17,8 +17,12 @@
     top: 0;
 }
 
+.navbar-logo {
+  flex: 1;
+}
+
 .navbar-logo img{
-  display: block;
+    display: block;
     width: 12em;
     margin: 0;
     cursor: pointer;
@@ -37,14 +41,14 @@
 
 .navbar li a {
     text-decoration: none;
-    color: inherit;
+    color: inherit
 }
 
 .navbar-panel {
-  width: 53vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex: 1.7;
 }
 
 .navbar-menu span.active {
@@ -58,6 +62,12 @@
     border: 1px solid #ffb703;
     border-radius: 6em;
     padding: 1em 1.1em;
+}
+
+.navbar-action {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navbar-action li {
@@ -85,6 +95,10 @@
     position: fixed;
   }
   
+  .navbar-logo img {
+    margin: 0 0.5em;
+  }
+
   .hamburger {
     cursor: pointer;
     z-index: 1100;
@@ -156,15 +170,19 @@
   .overlay.closing {
     animation: overlayFadeOut 0.25s ease-in forwards;
   }
+  .navbar.scrolled {
+    padding: 1.5em 5%;
+}
 }
 
 
 
 @media (max-width: 400px) {
   .navbar-logo img {
-    width: 7em;
+    width: 7.2em;
+    margin: 0 0.5em;
   }
   .hamburger-icon {
-    width: 1.2em;
+    width: 1.3em;
   }
 }

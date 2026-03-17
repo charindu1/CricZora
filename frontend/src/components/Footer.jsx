@@ -41,6 +41,11 @@ export default function Footer() {
                                 <img src={light_linkedin} alt="" />
                             </div>
                         </li>
+                        <li className="github" onClick={() => window.open('https://github.com/charindu1')}>
+                            <div className="contact-bg">
+                                <img src={light_github} alt="" />
+                            </div>
+                        </li>
                         <li className='facebook' onClick={() => window.open('https://www.facebook.com/share/17vfyU6xrQ/')}>
                             <div className="contact-bg">
                                 <img src={light_facebook} alt="" />
@@ -49,11 +54,6 @@ export default function Footer() {
                         <li className='instagram' onClick={() => window.open('https://www.instagram.com/charindu_munasinghe?igsh=cm51dWdmMmFub3Vt')}>
                             <div className="contact-bg">
                                 <img src={light_instagram} alt="" />
-                            </div>
-                        </li>
-                        <li className="github" onClick={() => window.open('https://github.com/charindu1')}>
-                            <div className="contact-bg">
-                                <img src={light_github} alt="" />
                             </div>
                         </li>
                     </div>
