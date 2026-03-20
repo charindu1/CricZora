@@ -23,7 +23,7 @@ export default function Home({ enableDelay }) {
         >
             <div className="home container">
                 {/* Hero Section */}
-                <div className="hero-section">
+                {/* <div className="hero-section">
                     <div className="hero-left">
                         <h1>
                             Welcome To<br /><span>CricZora</span>
@@ -48,7 +48,7 @@ export default function Home({ enableDelay }) {
                             alt="Cricket Illustration" 
                         />
                     </div>
-                </div>
+                </div> */}
 
                 {/* Features Preview */}
                 <div className="feature-section">
