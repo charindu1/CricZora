@@ -22,8 +22,8 @@ export default function Home({ enableDelay }) {
             transition={{ duration: 0.4, ease: "easeInOut", delay: enableDelay ? 0.4 : 0 }}
         >
             <div className="home container">
-                Hero Section */}
-                {/* <div className="hero-section">
+                {/* Hero Section */}
+                <div className="hero-section">
                     <div className="hero-left">
                         <h1>
                             Welcome To<br /><span>CricZora</span>
