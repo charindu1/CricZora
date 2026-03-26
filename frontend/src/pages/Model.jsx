@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
+import { m, motion } from 'framer-motion'
 import './Model.css'
 import { Bar, Line } from 'react-chartjs-2';
 import "chart.js/auto";
-import { Animation } from 'chart.js/auto';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import usePageTitle from '../hooks/usePageTitle';
+import { useMemo } from 'react';
 
 export default function Model({ enableDelay }) {
 
@@ -13,6 +13,18 @@ export default function Model({ enableDelay }) {
 
   // Responsive chart font size handling
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
+
+  // Trigger After Page Loads
+  const [showCharts, setShowCharts] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowCharts(true);
+    }, 300); 
+
+    return () => clearTimeout(timer);
+  }, []);
+  
   // Update isMobile state on window resize
   useEffect(() => {
   const handleResize = () => {
@@ -54,13 +66,13 @@ export default function Model({ enableDelay }) {
         // Wait 300ms for the page fade-in to settle, then set real values
         const timer = setTimeout(() => {
             setT20Feature([0.424312, 0.417720, 0.406094, 0.228668]);
-        }, 50);
+        }, 700);
 
         return () => clearTimeout(timer);
     }, []);
 
   // Feature importance data
-  const odiFeatureData = {
+  const odiFeatureData = useMemo(() => ({
     labels: ["Team2 Name", "Toss Winner", "Team1 Name", "Match Venue (Country)"],
     datasets: [
       {
@@ -70,10 +82,10 @@ export default function Model({ enableDelay }) {
         borderRadius: 5,
       },
     ],
-  };
+  }), []);
 
-  const t20FeatureData = {
-    labels: ["Team1 Name", "Team2 Name", "Toss Winner", "Match Venue (Country)"],
+  const t20FeatureData = useMemo(() => ({
+    labels: ["Toss Winner", "Team2 Name", "Team1 Name", "Match Venue (Country)"],
     datasets: [
       {
         label: "Feature Importance",
@@ -82,9 +94,9 @@ export default function Model({ enableDelay }) {
         borderRadius: 5,
       },
     ],
-  };
+  }), [t20Feature]);
 
-  const testFeatureData = {
+  const testFeatureData = useMemo(() => ({
     labels: ["Toss Winner", "Match Venue (Country)", "Team1 Name", "Team2 Name"],
     datasets: [
       {
@@ -94,7 +106,7 @@ export default function Model({ enableDelay }) {
         borderRadius: 5,
       },
     ],
-  };
+  }), []);
 
   // Common bar chart options
   const barOptions = {
@@ -142,7 +154,7 @@ export default function Model({ enableDelay }) {
       },
     },
     animation: {
-      duration: 1000,
+      duration: 300,
       easing: 'easeOutQuart'
     }
   };
@@ -252,23 +264,23 @@ export default function Model({ enableDelay }) {
 
 
   // Function to format data for line charts
-  const odiTrainTestData = formatData(
+  const odiTrainTestData = useMemo(() => formatData(
     ["Epoch 1", "Epoch 5", "Epoch 10", "Epoch 20", "Epoch 50", "Epoch 90"],
     [74.9, 87.4, 90.8, 93.1, 96.6, 99.0],
     [74.0, 84.2, 86.7, 88.8, 89.5, 90.6]
-  );
+  ), []);
 
-  const t20TrainTestData = formatData(
+  const t20TrainTestData = useMemo(() => formatData(
     ["Epoch 1", "Epoch 5", "Epoch 10", "Epoch 20", "Epoch 50", "Epoch 90"],
     [62.3, 82.3, 89.1, 95.6, 98.3, 98.8],
     [49.7, 60.0, 64.0, 67.1, 68.6, 70.2]
-  );
+  ), []);
 
-  const testTrainTestData = formatData(
+  const testTrainTestData = useMemo(() => formatData(
     ["Epoch 1", "Epoch 5", "Epoch 10", "Epoch 20", "Epoch 50", "Epoch 90"],
     [31.9, 43.0, 49.1, 51.8, 56.0, 57.0],
     [31.0, 40.2, 44.7, 46.1, 47.4, 48.5]
-  );
+  ), []);
 
 
 
@@ -362,15 +374,15 @@ export default function Model({ enableDelay }) {
             <h2>Feature Importance</h2>
             <div className="card">
               <h3>T20 International</h3>
-              <Bar data={t20FeatureData} options={barOptions} />
+              {showCharts && <Bar data={t20FeatureData} options={barOptions} />}
             </div>
             <div className="card">
               <h3>ODI International</h3>
-              <Bar data={odiFeatureData} options={barOptions} />
+              {showCharts && <Bar data={odiFeatureData} options={barOptions} />}
             </div>
             <div className="card">
               <h3>Test International</h3>
-              <Bar data={testFeatureData} options={barOptions} />
+              {showCharts && <Bar data={testFeatureData} options={barOptions} />}
             </div>
           </div>
         </div>
@@ -382,7 +394,7 @@ export default function Model({ enableDelay }) {
             <div className="line-chart-wrapper">
               <h3>T20 International</h3>
               <div className="line-chart-container">
-                <Line data={t20TrainTestData} options={lineOptions} />
+                {showCharts && <Line data={t20TrainTestData} options={lineOptions} />}
               </div>
             </div>
 
@@ -390,7 +402,7 @@ export default function Model({ enableDelay }) {
             <div className="line-chart-wrapper">
               <h3>ODI International</h3>
               <div className="line-chart-container">
-                <Line data={odiTrainTestData} options={lineOptions} />
+                {showCharts && <Line data={odiTrainTestData} options={lineOptions} />}
               </div>
             </div>
 
@@ -398,7 +410,7 @@ export default function Model({ enableDelay }) {
             <div className="line-chart-wrapper">
               <h3>Test International</h3>
               <div className="line-chart-container">
-                <Line data={testTrainTestData} options={lineOptions} />
+                {showCharts && <Line data={testTrainTestData} options={lineOptions} />}
               </div>
             </div>
           </div>    
