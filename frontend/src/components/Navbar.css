@@ -104,7 +104,7 @@
     z-index: 1100;
     padding: 0.5em;
     border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   .hamburger-icon {
@@ -115,7 +115,7 @@
 
   .hamburger:active {
     transform: scale(0.8);
-    background: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
   }
 
   .navbar-panel {

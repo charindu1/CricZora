@@ -1,9 +1,9 @@
 import './About.css'
 import { motion } from "framer-motion";
-import overview from '../assets/overview.png'
-import project_implementation from '../assets/project_implementation.png'
-import motivation from '../assets/motivation.png'
-import contact_us from '../assets/contact_us.png'
+import overview from '../assets/overview.jpg'
+import project_implementation from '../assets/project_implementation.jpg'
+import motivation from '../assets/motivation.jpg'
+import contact_us from '../assets/contact_us.jpg'
 import { useEffect } from 'react';
 import usePageTitle from '../hooks/usePageTitle';
 
