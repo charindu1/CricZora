@@ -12,7 +12,7 @@ import usePageTitle from "../hooks/usePageTitle";
 export default function Home({ enableDelay }) {
     const navigate = useNavigate();
 
-    usePageTitle("CricZora - Home");
+    usePageTitle("CricZora | ML-Based Cricket Match Winning Predictor");
 
     return (
         <motion.div
